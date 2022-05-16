@@ -5,8 +5,8 @@ const sequelize = new Sequelize(
     process.env.MYSQL_DATABSE,
     'root', process.env.MYSQL_ROOT_PASSWORD,
     {
-        host: 'localhost',
-        dialect: 'mysql'
+        host: process.env.HOST,
+        dialect: process.env.DIALECT
     }
 );
 module.exports = sequelize;
